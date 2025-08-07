@@ -26,6 +26,44 @@ run_command() {
 # Ensure the script is run as root
 [ "$(id -u)" -ne 0 ] && echo "Run as root." && exit 1
 
+# Define the paths to add
+PATHS_TO_ADD="/usr/local/sbin:/usr/sbin:/sbin"
+
+# Check if the paths are already in root's PATH
+if [[ ":$PATH:" != *":/usr/local/sbin:/usr/sbin:/sbin:"* ]]; then
+  # Append the paths to /root/.bashrc to persist across sessions
+  echo "export PATH=\$PATH:$PATHS_TO_ADD" >> /root/.bashrc
+  echo "Added $PATHS_TO_ADD to root's PATH in /root/.bashrc"
+else
+  echo "The paths $PATHS_TO_ADD are already in root's PATH."
+fi
+
+# Source the .bashrc to apply changes immediately in the current session
+source /root/.bashrc
+
+# Verify that ldconfig and start-stop-daemon are now accessible
+echo "Checking for ldconfig and start-stop-daemon..."
+if command -v ldconfig >/dev/null 2>&1; then
+  echo "ldconfig found at: $(which ldconfig)"
+else
+  echo "Error: ldconfig not found. Ensure it is installed (e.g., part of libc-bin)."
+fi
+
+if command -v start-stop-daemon >/dev/null 2>&1; then
+  echo "start-stop-daemon found at: $(which start-stop-daemon)"
+else
+  echo "Error: start-stop-daemon not found. Ensure it is installed (e.g., part of dpkg)."
+fi
+
+# Display the updated PATH
+echo "Root's PATH is now: $PATH"
+
+# Suggest next steps if tools are missing
+if ! command -v ldconfig >/dev/null 2>&1 || ! command -v start-stop-daemon >/dev/null 2>&1; then
+  echo "One or both tools are missing. Try reinstalling the required packages:"
+  echo "Run: apt-get update && apt-get install --reinstall libc-bin dpkg"
+fi
+
 # Change to temporary directory
 cd /tmp
 

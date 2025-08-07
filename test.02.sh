@@ -82,14 +82,18 @@ cockpit cockpit-networkmanager cockpit-packagekit cockpit-sosreport \
 cockpit-storaged cockpit-system cockpit-ws python3-serial sudo
 
 # Download the HTML and branding tarballs for customization
-wget -c https://github.com/dbqrs/asl3/raw/refs/heads/main/html.tar.gz
-wget -c https://github.com/dbqrs/asl3/raw/refs/heads/main/branding.tar.gz
+wget -c https://raw.githubusercontent.com/dbqrs/asl3/refs/heads/main/html.tar.gz
+wget -c https://raw.githubusercontent.com/dbqrs/asl3/refs/heads/main/branding.tar.gz
+wget -c https://raw.githubusercontent.com/dbqrs/asl3/refs/heads/main/bg-plain.jpg
 
 # Extract HTML files to the web server root
 tar -xvzf html.tar.gz -C /var/www/html
 
 # Extract branding files to Cockpit's branding directory
 tar -xvzf branding.tar.gz -C /usr/share/cockpit/branding/debian
+
+# Overwrite default background
+cp bg-plain.jpg /usr/share/cockpit/branding/default/bg-plain.jpg
 
 # Restart the allmon3 service
 systemctl restart allmon3

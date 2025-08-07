@@ -1,10 +1,11 @@
 #!/bin/bash
 set -euo pipefail
 
-# Script: setup_asl3.sh
+# Script: install.sh
 # Purpose: Installs and configures AllStarLink (ASL3) with Allmon3, Cockpit, and custom branding
 # Usage: sudo ./setup_asl3.sh
 # Log file
+
 LOGFILE="/var/log/asl3_setup.log"
 
 # Function to log messages
@@ -21,7 +22,6 @@ run_command() {
         exit 1
     fi
 }
-
 
 # Ensure the script is run as root
 [ "$(id -u)" -ne 0 ] && echo "Run as root." && exit 1
@@ -94,9 +94,6 @@ tar -xvzf branding.tar.gz -C /usr/share/cockpit/branding/debian
 
 # Overwrite default background
 cp bg-plain.jpg /usr/share/cockpit/branding/default/bg-plain.jpg
-
-# Restart the allmon3 service
-systemctl restart allmon3
 
 # Inform user and delete the existing allmon3 password
 echo "Deleting existing password for allmon3..."

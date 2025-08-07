@@ -91,6 +91,9 @@ tar -xvzf html.tar.gz -C /var/www/html
 # Extract branding files to Cockpit's branding directory
 tar -xvzf branding.tar.gz -C /usr/share/cockpit/branding/debian
 
+# Restart the allmon3 service
+systemctl restart allmon3
+
 # Inform user and delete the existing allmon3 password
 echo "Deleting existing password for allmon3..."
 allmon3-passwd --delete allmon3
@@ -102,7 +105,7 @@ read -p "Press [Enter] to set the new password for user 'allmon3'..."
 allmon3-passwd allmon3
 
 # Restart the allmon3 service
-systemctl restart allmon3
+# systemctl restart allmon3
 
 # Restart the apache service
 systemctl restart apache2

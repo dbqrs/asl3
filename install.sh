@@ -398,6 +398,25 @@ if ${PUBLISH_CA}; then
   install -m 0644 "${CA_CRT}" "${WEBROOT}/host-local-ca.crt"
 fi
 
+# --- Cockpit TLS hookup (port 9090) ---
+log "Configuring Cockpit to use the same TLS cert…"
+COCKPIT_DIR="/etc/cockpit/ws-certs.d"
+COCKPIT_CERT="${COCKPIT_DIR}/99-host.cert"
+COCKPIT_KEY="${COCKPIT_DIR}/99-host.key"
+
+mkdir -p "${COCKPIT_DIR}"
+# Cockpit accepts either a single .cert containing cert+key, or a .cert/.key pair.
+# We'll supply a matching pair so it stays clean.
+install -m 0644 "${SRV_CRT}" "${COCKPIT_CERT}"
+install -m 0600 "${SRV_KEY}" "${COCKPIT_KEY}"
+
+# Make sure our files sort last so Cockpit prefers them.
+# Restart the socket (service is socket-activated).
+systemctl restart cockpit.socket 2>/dev/null || true
+systemctl restart cockpit 2>/dev/null || true
+
+log "Cockpit set to use ${COCKPIT_CERT} and ${COCKPIT_KEY} (port 9090)."
+
 echo
 echo "============================================================"
 echo " Done."
@@ -408,5 +427,3 @@ ${PUBLISH_CA} && echo "  - Install this CA on client devices: http://${CN}/host-
 echo "  - Cert SANs: ${SAN_BLOCK}"
 echo "  - IP assignment detected: ${STATE:-unknown}"
 echo "============================================================"
-
-

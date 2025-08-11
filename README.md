@@ -28,25 +28,6 @@
 <pre><code class="language-bash">curl -sSL https://asl.dbqrs.com</code></pre>
 
 ---
-
-<script>
-document.addEventListener('click', async (e) => {
-  const btn = e.target.closest('. -btn');
-  if (!btn) return;
-  const pre = btn.nextElementSibling;
-  const code = pre && pre.querySelector('code');
-  if (!code) return;
-  try {
-    await navigator.clipboard.writeText(code.innerText);
-    const original = btn.textContent;
-    btn.textContent = 'Copied!';
-    setTimeout(() => (btn.textContent = original), 1200);
-  } catch (err) {
-    console.error('  failed:', err);
-  }
-});
-</script>
-
 ---
 
 ## Configure a Static IP Address in Debian 12 Linux

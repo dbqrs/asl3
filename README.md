@@ -39,7 +39,7 @@ This guide will walk you through changing the network configuration from DHCP to
 ### **1) Open the network configuration file**
 
 ```bash
-#  :
+ 
 nano /etc/network/interfaces
 ```
 
@@ -58,7 +58,7 @@ iface eth0 inet dhcp
 Replace with the following (adjust for your network):
 
 ```plaintext
-#  :
+ 
 auto eth0
 iface eth0 inet static
     address 192.168.1.55
@@ -80,7 +80,7 @@ iface eth0 inet static
 ### **5) Restart the networking service**
 
 ```bash
-#  :
+ 
 systemctl restart networking
 ```
 
@@ -89,7 +89,7 @@ systemctl restart networking
 ### **6) Verify the IP address**
 
 ```bash
-#  :
+ 
 ip a
 ```
 

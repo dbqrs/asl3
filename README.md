@@ -39,7 +39,7 @@
 ---
 
 ## Setting up AllStar Link 3 on Shari PI
-For a detailed tutorial on setting up AllStar Link 3 on your Shari PI, watch this video:
+For a detailed tutorial on setting up AllStar Link 3 on your Shari PI, watch this video from GraymanPOTA:
 
 [![Setting up AllStar Link 3 on Shari PIHat](https://img.youtube.com/vi/NPgTRa5bpnY/0.jpg)](https://www.youtube.com/watch?v=NPgTRa5bpnY)
 

@@ -99,3 +99,9 @@ ip a
 
 #### Look for your configured IP (e.g., `192.168.1.55`).
 ---
+---
+
+## Setting up AllStar Link 3 on Shari PI
+For a detailed tutorial on setting up AllStar Link 3 on your Shari PI, watch this video:
+
+[![Setting up AllStar Link 3 on Shari PIHat](https://img.youtube.com/vi/NPgTRa5bpnY/0.jpg)](https://www.youtube.com/watch?v=NPgTRa5bpnY)

@@ -1,52 +1,43 @@
-Here’s your installer guide converted to **Markdown** so it’s readable, styled with headings, and keeps the code formatting intact.
-
-````markdown
 # AllStarLink 3 Debian PC Installer
 
 <p align="center">
   <img src="logo200.png" alt="unofficial logo" title="ASL3/Debian" width="131" height="125" />
 </p>
 
----
+> [!IMPORTANT]
+> Make sure you’re logged in as the **root** user.
 
-## Installation
-
-> **Note:** Make sure you are logged in as the **root** user.
-
-If you did not set a static IP when installing Debian, it is highly recommended you do it now. See the section below for static IP configuration instructions.
-
-Before starting, ensure `curl` is installed:
-
-```bash
-apt install curl
-````
-
-Before running the installation command, it’s **highly recommended** you view the code first:
-[https://asl.dbqrs.com](https://asl.dbqrs.com)
-
-To install:
-
-```bash
-curl -sSL https://asl.dbqrs.com
-```
+> [!TIP]
+> Review the installer script before running it: <https://asl.dbqrs.com>
 
 ---
 
-## Configure a Static IP Address in Debian 12 Linux
+## Step 1 — Install `curl`
 
-This guide will walk you through changing the network configuration from DHCP to a static IP.
-
-### 1. Open the Network Configuration File
-
-```bash
-nano /etc/network/interfaces
-```
+<button class="copy-btn">Copy</button>
+<pre><code class="language-bash">apt install curl</code></pre>
 
 ---
 
-### 2. Find the Current Configuration
+## Step 2 — Run the installer
 
-Look for:
+<button class="copy-btn">Copy</button>
+<pre><code class="language-bash">curl -sSL https://asl.dbqrs.com</code></pre>
+
+> If you didn’t set a static IP during Debian install, it’s recommended to do that now. Follow Steps 3–8.
+
+---
+
+## Step 3 — Open the network configuration file
+
+<button class="copy-btn">Copy</button>
+<pre><code class="language-bash">nano /etc/network/interfaces</code></pre>
+
+---
+
+## Step 4 — Find the current configuration
+
+Look for this line:
 
 ```bash
 iface eth0 inet dhcp
@@ -54,11 +45,104 @@ iface eth0 inet dhcp
 
 ---
 
-### 3. Change DHCP to Static
+## Step 5 — Switch from DHCP to Static
 
-Replace with the following (adjust values for your network):
+Replace the DHCP line with a static config that fits your network:
+
+<button class="copy-btn">Copy</button>
+
+<pre><code class="language-ini">auto eth0
+iface eth0 inet static
+    address 192.168.1.55
+    network 192.168.1.0
+    gateway 192.168.1.1
+    dns-nameservers 8.8.8.8</code></pre>
+
+> \[!NOTE]
+> Your interface name may differ (e.g., `enp0s3`, `ens33`). Replace `eth0` with your actual interface.
+
+---
+
+## Step 6 — Save and exit `nano`
+
+* Press **CTRL+X**
+* Press **Y** to confirm
+* Press **Enter** to write the file and exit
+
+---
+
+## Step 7 — Restart networking
+
+<button class="copy-btn">Copy</button>
+
+<pre><code class="language-bash">systemctl restart networking</code></pre>
+
+---
+
+## Step 8 — Verify the IP address
+
+<button class="copy-btn">Copy</button>
+
+<pre><code class="language-bash">ip a</code></pre>
+
+Look for your configured IP (e.g., `192.168.1.55`).
+
+---
+
+### Copy buttons (GitHub Pages support)
+
+When this README is published via **GitHub Pages**, the buttons above will copy the adjacent code block.
+They won’t copy on the repository view at github.com (GitHub strips scripts there).
+
+<script>
+document.addEventListener('click', async (e) => {
+  const btn = e.target.closest('.copy-btn');
+  if (!btn) return;
+  const pre = btn.nextElementSibling;
+  const code = pre && pre.querySelector('code');
+  if (!code) return;
+  try {
+    await navigator.clipboard.writeText(code.innerText);
+    const original = btn.textContent;
+    btn.textContent = 'Copied!';
+    setTimeout(() => (btn.textContent = original), 1200);
+  } catch (err) {
+    console.error('Copy failed:', err);
+  }
+});
+</script>
+
+---
+
+## Configure a Static IP Address in Debian 12 Linux
+
+This guide will walk you through changing the network configuration from DHCP to a static IP.
+
+---
+
+### **1) Open the network configuration file**
+
+```bash
+# Copy:
+nano /etc/network/interfaces
+```
+
+---
+
+### **2) Find the current configuration**
+
+```bash
+iface eth0 inet dhcp
+```
+
+---
+
+### **3) Change DHCP to Static**
+
+Replace with the following (adjust for your network):
 
 ```plaintext
+# Copy:
 auto eth0
 iface eth0 inet static
     address 192.168.1.55
@@ -69,7 +153,7 @@ iface eth0 inet static
 
 ---
 
-### 4. Save and Exit `nano`
+### **4) Save and exit nano**
 
 * Press `CTRL+X` to begin saving.
 * Press `Y` to confirm changes.
@@ -77,17 +161,19 @@ iface eth0 inet static
 
 ---
 
-### 5. Restart the Networking Service
+### **5) Restart the networking service**
 
 ```bash
+# Copy:
 systemctl restart networking
 ```
 
 ---
 
-### 6. Verify the IP Address
+### **6) Verify the IP address**
 
 ```bash
+# Copy:
 ip a
 ```
 
@@ -95,7 +181,8 @@ Look for your configured IP (e.g., `192.168.1.55`).
 
 ---
 
-**Tip:** Your network interface name might not be `eth0`. It could be `enp0s3` or `ens33`. Use the correct interface name for your system.
+> \[!NOTE]
+> Your interface name might not be `eth0`. It could be something like `enp0s3` or `ens33`.
+> Replace `eth0` with your actual interface name.
 
-```
-```
+---

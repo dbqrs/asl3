@@ -39,7 +39,6 @@ This guide will walk you through changing the network configuration from DHCP to
 ### **1) Open the network configuration file**
 
 ```bash
- 
 nano /etc/network/interfaces
 ```
 
@@ -78,7 +77,6 @@ iface eth0 inet static
 ---
 
 ### **5) Restart the networking service**
-
 ```bash
  
 systemctl restart networking
@@ -89,7 +87,6 @@ systemctl restart networking
 ### **6) Verify the IP address**
 
 ```bash
- 
 ip a
 ```
 

@@ -57,7 +57,6 @@ iface eth0 inet dhcp
 Replace with the following (adjust for your network):
 
 ```plaintext
- 
 auto eth0
 iface eth0 inet static
     address 192.168.1.55
@@ -78,14 +77,12 @@ iface eth0 inet static
 
 ### **5) Restart the networking service**
 ```bash
- 
 systemctl restart networking
 ```
 
 ---
 
 ### **6) Verify the IP address**
-
 ```bash
 ip a
 ```

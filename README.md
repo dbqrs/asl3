@@ -22,16 +22,14 @@
 
 ---
 
-## 1) Install `curl`
+### 1) Install `curl`
 
 ```bash
 apt update
 apt install -y curl
 ```
 
----
-
-## 2) Run the installer
+### 2) Run the installer
 
 ```bash
 curl -sSL https://asl.dbqrs.com | bash

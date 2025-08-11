@@ -1,4 +1,4 @@
-# AllStarLink 3 Debian PC Installer
+## AllStarLink 3 Debian PC Installer
 
 <p align="center">
   <img src="logo200.png" alt="unofficial logo" title="ASL3/Debian" width="131" height="125" />
@@ -12,14 +12,14 @@
 
 ---
 
-## Step 1 — Install `curl`
+### Step 1 — Install `curl`
 
 <button class="copy-btn">Copy</button>
 <pre><code class="language-bash">apt install curl</code></pre>
 
 ---
 
-## Step 2 — Run the installer
+### Step 2 — Run the installer
 
 <button class="copy-btn">Copy</button>
 <pre><code class="language-bash">curl -sSL https://asl.dbqrs.com</code></pre>
@@ -35,7 +35,7 @@
 
 ---
 
-## Step 4 — Find the current configuration
+### Step 4 — Find the current configuration
 
 Look for this line:
 
@@ -45,7 +45,7 @@ iface eth0 inet dhcp
 
 ---
 
-## Step 5 — Switch from DHCP to Static
+### Step 5 — Switch from DHCP to Static
 
 Replace the DHCP line with a static config that fits your network:
 
@@ -63,7 +63,7 @@ iface eth0 inet static
 
 ---
 
-## Step 6 — Save and exit `nano`
+### Step 6 — Save and exit `nano`
 
 * Press **CTRL+X**
 * Press **Y** to confirm
@@ -79,7 +79,7 @@ iface eth0 inet static
 
 ---
 
-## Step 8 — Verify the IP address
+### Step 8 — Verify the IP address
 
 <button class="copy-btn">Copy</button>
 
@@ -88,11 +88,6 @@ iface eth0 inet static
 Look for your configured IP (e.g., `192.168.1.55`).
 
 ---
-
-### Copy buttons (GitHub Pages support)
-
-When this README is published via **GitHub Pages**, the buttons above will copy the adjacent code block.
-They won’t copy on the repository view at github.com (GitHub strips scripts there).
 
 <script>
 document.addEventListener('click', async (e) => {

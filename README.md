@@ -14,8 +14,8 @@
 > You **must** be logged in as the **root** user.
 
 > \[!IMPORTANT]
-> If you didn’t set a static IP during Debian install, do that **before** running the installer.
-> See: [Configure a Static IP Address in Debian 12 Linux](#configure-a-static-ip-address-in-debian-12-linux).
+> If you didn’t set a static IP during install of Debian, I highly recommend you do that **before** running the installer.
+> See [this guide for an easy how to](#configure-a-static-ip-address-in-debian-12-linux).
 
 > \[!TIP]
 > Review the installer script before running it: [https://asl.dbqrs.com](https://asl.dbqrs.com)
@@ -39,9 +39,9 @@ curl -sSL https://asl.dbqrs.com | bash
 
 ## Setting up AllStarLink 3 on Shari PI
 
-For a detailed tutorial on setting up AllStarLink 3 on your Shari PI, watch this video from GraymanPOTA:
+For a great tutorial on setting up AllStarLink 3 on your Shari PI, watch this video from [GraymanPOTA](https://graymanpota.com/):
 
-[![Setting up AllStarLink 3 on Shari PI Hat](https://img.youtube.com/vi/NPgTRa5bpnY/0.jpg)](https://www.youtube.com/watch?v=NPgTRa5bpnY)
+[![Setting up AllStarLink 3 on Shari PI](https://img.youtube.com/vi/NPgTRa5bpnY/0.jpg)](https://www.youtube.com/watch?v=NPgTRa5bpnY)
 
 ---
 
@@ -93,7 +93,7 @@ systemctl restart networking
 ### 6) Verify the IP address
 
 ```bash
-ip addr show
+ip addr
 ```
 
 Look for your configured IP (e.g., `192.168.1.55`).

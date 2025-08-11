@@ -1,15 +1,7 @@
-<h1 align="center">
-  AllStarLink 3 Debian PC Installer  
-</h1>
+# AllStarLink 3 Debian PC Installer
 
 <p align="center">
-  <img
-    src="logo200.png"
-    alt="unofficial logo"
-    title="ASL3/Debian"
-    width="131"
-    height="125"
-  />
+  <img src="logo200.png" alt="unofficial logo" title="ASL3/Debian" width="131" height="125" />
 </p>
 
 > [!IMPORTANT]
@@ -20,16 +12,16 @@
 
 ---
 
-### Step 1 — Install `curl`
+## Step 1 — Install `curl`
 
-<button class="copy-btn">Copy</button>
+<button class=" -btn"> </button>
 <pre><code class="language-bash">apt install curl</code></pre>
 
 ---
 
-### Step 2 — Run the installer
+## Step 2 — Run the installer
 
-<button class="copy-btn">Copy</button>
+<button class=" -btn"> </button>
 <pre><code class="language-bash">curl -sSL https://asl.dbqrs.com</code></pre>
 
 > If you didn’t set a static IP during Debian install, it’s recommended to do that now. Follow Steps 3–8.
@@ -38,12 +30,12 @@
 
 ## Step 3 — Open the network configuration file
 
-<button class="copy-btn">Copy</button>
+<button class=" -btn"> </button>
 <pre><code class="language-bash">nano /etc/network/interfaces</code></pre>
 
 ---
 
-### Step 4 — Find the current configuration
+## Step 4 — Find the current configuration
 
 Look for this line:
 
@@ -53,11 +45,11 @@ iface eth0 inet dhcp
 
 ---
 
-### Step 5 — Switch from DHCP to Static
+## Step 5 — Switch from DHCP to Static
 
 Replace the DHCP line with a static config that fits your network:
 
-<button class="copy-btn">Copy</button>
+<button class=" -btn"> </button>
 
 <pre><code class="language-ini">auto eth0
 iface eth0 inet static
@@ -71,7 +63,7 @@ iface eth0 inet static
 
 ---
 
-### Step 6 — Save and exit `nano`
+## Step 6 — Save and exit `nano`
 
 * Press **CTRL+X**
 * Press **Y** to confirm
@@ -81,15 +73,15 @@ iface eth0 inet static
 
 ## Step 7 — Restart networking
 
-<button class="copy-btn">Copy</button>
+<button class=" -btn"> </button>
 
 <pre><code class="language-bash">systemctl restart networking</code></pre>
 
 ---
 
-### Step 8 — Verify the IP address
+## Step 8 — Verify the IP address
 
-<button class="copy-btn">Copy</button>
+<button class=" -btn"> </button>
 
 <pre><code class="language-bash">ip a</code></pre>
 
@@ -97,9 +89,14 @@ Look for your configured IP (e.g., `192.168.1.55`).
 
 ---
 
+###   buttons (GitHub Pages support)
+
+When this README is published via **GitHub Pages**, the buttons above will   the adjacent code block.
+They won’t   on the repository view at github.com (GitHub strips scripts there).
+
 <script>
 document.addEventListener('click', async (e) => {
-  const btn = e.target.closest('.copy-btn');
+  const btn = e.target.closest('. -btn');
   if (!btn) return;
   const pre = btn.nextElementSibling;
   const code = pre && pre.querySelector('code');
@@ -110,7 +107,7 @@ document.addEventListener('click', async (e) => {
     btn.textContent = 'Copied!';
     setTimeout(() => (btn.textContent = original), 1200);
   } catch (err) {
-    console.error('Copy failed:', err);
+    console.error('  failed:', err);
   }
 });
 </script>
@@ -126,7 +123,7 @@ This guide will walk you through changing the network configuration from DHCP to
 ### **1) Open the network configuration file**
 
 ```bash
-# Copy:
+#  :
 nano /etc/network/interfaces
 ```
 
@@ -145,7 +142,7 @@ iface eth0 inet dhcp
 Replace with the following (adjust for your network):
 
 ```plaintext
-# Copy:
+#  :
 auto eth0
 iface eth0 inet static
     address 192.168.1.55
@@ -167,7 +164,7 @@ iface eth0 inet static
 ### **5) Restart the networking service**
 
 ```bash
-# Copy:
+#  :
 systemctl restart networking
 ```
 
@@ -176,7 +173,7 @@ systemctl restart networking
 ### **6) Verify the IP address**
 
 ```bash
-# Copy:
+#  :
 ip a
 ```
 

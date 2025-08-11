@@ -1,4 +1,4 @@
-# AllStarLink 3 Debian PC Installer
+## AllStarLink 3 Debian PC Installer
 
 <p align="center">
   <img src="logo200.png" alt="unofficial logo" title="ASL3/Debian" width="131" height="125" />
@@ -15,14 +15,14 @@
 
 ---
 
-## Step 1 — Install `curl`
+### Step 1 — Install `curl`
 
 <button class=" -btn"> </button>
 <pre><code class="language-bash">apt install curl</code></pre>
 
 ---
 
-## Step 2 — Run the installer
+### Step 2 — Run the installer
 
 <button class=" -btn"> </button>
 <pre><code class="language-bash">curl -sSL https://asl.dbqrs.com</code></pre>

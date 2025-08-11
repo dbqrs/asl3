@@ -6,8 +6,9 @@
 
 > [!IMPORTANT]
 > Make sure you’re logged in as the **root** user.
+> If you didn’t set a static IP during Debian install, it’s recommended to do that now. See this [installation guide](#configure-a-static-ip-address-in-debian-12-linux).
 
-> [!TIP]
+> [!PROTIP]
 > Review the installer script before running it: <https://asl.dbqrs.com>
 
 ---
@@ -23,8 +24,6 @@
 
 <button class=" -btn"> </button>
 <pre><code class="language-bash">curl -sSL https://asl.dbqrs.com</code></pre>
-
-> If you didn’t set a static IP during Debian install, it’s recommended to do that now. Follow Steps 3–8.
 
 ---
 

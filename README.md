@@ -11,7 +11,3 @@
     height="125"
   />
 </p>
-
-
-To view full code visit https://asl.dbqrs.com
-To install curl -sSL https://asl.dbqrs.com | bash

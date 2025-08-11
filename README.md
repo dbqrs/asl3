@@ -28,14 +28,11 @@
 <button class=" -btn"> </button>
 <pre><code class="language-bash">apt install curl</code></pre>
 
----
-
 #### 2) Run the installer
 
 <button class=" -btn"> </button>
 <pre><code class="language-bash">curl -sSL https://asl.dbqrs.com</code></pre>
 
----
 ---
 
 ## Setting up AllStar Link 3 on Shari PI
@@ -44,13 +41,10 @@ For a detailed tutorial on setting up AllStar Link 3 on your Shari PI, watch thi
 [![Setting up AllStar Link 3 on Shari PIHat](https://img.youtube.com/vi/NPgTRa5bpnY/0.jpg)](https://www.youtube.com/watch?v=NPgTRa5bpnY)
 
 ---
----
 
 ### Configure a Static IP Address in Debian 12 Linux
 
 This guide will walk you through changing the network configuration from DHCP to a static IP.
-
----
 
 #### **1) Open the network configuration file**
 
@@ -58,15 +52,11 @@ This guide will walk you through changing the network configuration from DHCP to
 nano /etc/network/interfaces
 ```
 
----
-
 #### **2) Find the current configuration**
 
 ```bash
 iface eth0 inet dhcp
 ```
-
----
 
 #### **3) Change DHCP to Static**
 
@@ -83,7 +73,6 @@ iface eth0 inet static
 > \[!NOTE]
 > Your interface name might not be `eth0`. It could be something like `enp0s3` or `ens33`.
 > Replace `eth0` with your actual interface name.
----
 
 #### **4) Save and exit nano**
 
@@ -91,14 +80,10 @@ iface eth0 inet static
 * Press `Y` to confirm changes.
 * Press `Enter` to write the file and exit.
 
----
-
 #### **5) Restart the networking service**
 ```bash
 systemctl restart networking
 ```
-
----
 
 #### **6) Verify the IP address**
 ```bash

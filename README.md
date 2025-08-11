@@ -15,14 +15,14 @@
 
 ---
 
-### Step 1 — Install `curl`
+#### 1) Install `curl`
 
 <button class=" -btn"> </button>
 <pre><code class="language-bash">apt install curl</code></pre>
 
 ---
 
-### Step 2 — Run the installer
+#### 2) Run the installer
 
 <button class=" -btn"> </button>
 <pre><code class="language-bash">curl -sSL https://asl.dbqrs.com</code></pre>
@@ -30,13 +30,13 @@
 ---
 ---
 
-## Configure a Static IP Address in Debian 12 Linux
+### Configure a Static IP Address in Debian 12 Linux
 
 This guide will walk you through changing the network configuration from DHCP to a static IP.
 
 ---
 
-### **1) Open the network configuration file**
+#### **1) Open the network configuration file**
 
 ```bash
 nano /etc/network/interfaces
@@ -44,7 +44,7 @@ nano /etc/network/interfaces
 
 ---
 
-### **2) Find the current configuration**
+#### **2) Find the current configuration**
 
 ```bash
 iface eth0 inet dhcp
@@ -52,7 +52,7 @@ iface eth0 inet dhcp
 
 ---
 
-### **3) Change DHCP to Static**
+#### **3) Change DHCP to Static**
 
 Replace with the following (adjust for your network):
 
@@ -64,10 +64,12 @@ iface eth0 inet static
     gateway 192.168.1.1
     dns-nameservers 8.8.8.8
 ```
-
+> \[!NOTE]
+> Your interface name might not be `eth0`. It could be something like `enp0s3` or `ens33`.
+> Replace `eth0` with your actual interface name.
 ---
 
-### **4) Save and exit nano**
+#### **4) Save and exit nano**
 
 * Press `CTRL+X` to begin saving.
 * Press `Y` to confirm changes.
@@ -75,24 +77,17 @@ iface eth0 inet static
 
 ---
 
-### **5) Restart the networking service**
+#### **5) Restart the networking service**
 ```bash
 systemctl restart networking
 ```
 
 ---
 
-### **6) Verify the IP address**
+#### **6) Verify the IP address**
 ```bash
 ip a
 ```
 
-Look for your configured IP (e.g., `192.168.1.55`).
-
----
-
-> \[!NOTE]
-> Your interface name might not be `eth0`. It could be something like `enp0s3` or `ens33`.
-> Replace `eth0` with your actual interface name.
-
+#### Look for your configured IP (e.g., `192.168.1.55`).
 ---

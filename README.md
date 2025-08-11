@@ -21,15 +21,11 @@
 > [!TIP]
 > Review the installer script before running it: <https://asl.dbqrs.com>
 
----
-
 #### 1) Install `curl`
-
 <button class=" -btn"> </button>
 <pre><code class="language-bash">apt install curl</code></pre>
 
 #### 2) Run the installer
-
 <button class=" -btn"> </button>
 <pre><code class="language-bash">curl -sSL https://asl.dbqrs.com</code></pre>
 
@@ -43,7 +39,6 @@ For a detailed tutorial on setting up AllStar Link 3 on your Shari PI, watch thi
 ---
 
 ### Configure a Static IP Address in Debian 12 Linux
-
 This guide will walk you through changing the network configuration from DHCP to a static IP.
 
 #### **1) Open the network configuration file**

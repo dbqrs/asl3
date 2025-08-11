@@ -3,7 +3,7 @@ set -euo pipefail
 
 # Script: install.sh
 # Purpose: Installs and configures AllStarLink (ASL3) with Allmon3, Cockpit, and custom branding
-# Usage: sudo ./setup_asl3.sh
+# Usage: sudo ./install.sh
 # Log file
 
 LOGFILE="/var/log/asl3_setup.log"

@@ -25,6 +25,7 @@
 
 ## Download Links
 [debian-12.11.0-amd64-netinst.iso](https://cdimage.debian.org/cdimage/archive/12.11.0/amd64/iso-cd/debian-12.11.0-amd64-netinst.iso) - Debain 13 was released on 2025/08/09, but is not yet compatible with the current AllStarLink packages. 
+
 [Rufus bootable USB creator](https://rufus.ie/en/)
 
 ---

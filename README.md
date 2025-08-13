@@ -23,6 +23,10 @@
 > \[!NOTE]
 > This script installs AllStarlink 3, Allmon 3, Cockpit, Sudo, and required dependencies. It automates the creation of a self-signed SSL certificate to enable HTTPS, valid for 10 years. It adds necessary system paths and creates a logfile located at /var/log/asl3_setup.log
 
+## Download Links
+[debian-12.11.0-amd64-netinst.iso](https://cdimage.debian.org/cdimage/archive/12.11.0/amd64/iso-cd/debian-12.11.0-amd64-netinst.iso) - Debain 13 was released on 2025/08/09, but is not yet compatible with the current AllStarLink packages. 
+[Rufus bootable USB creator](https://rufus.ie/en/)
+
 ---
 
 ### 1) Install `curl`

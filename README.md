@@ -11,7 +11,7 @@
 <h1 align="center">AllStarLink 3 Debian PC Installer</h1>
 
 > \[!IMPORTANT]
-> You **must** be logged in as the **root** user. At the command line type: **su -** and then enter the root passowrd you created when you installed Debian.
+> You **must** be logged in as the **root** user. At the command line type: **su -**  then enter the root passowrd you created when you installed Debian.
 
 > \[!IMPORTANT]
 > If you didn’t set a static IP during install of Debian, I highly recommend you do that **before** running the installer.

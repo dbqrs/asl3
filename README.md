@@ -13,6 +13,10 @@
 > \[!IMPORTANT]
 > You **must** be logged in as the **root** user. At the command line type: **su -**  then enter the root passowrd you created when you installed Debian.
 
+<!-- > \[!IMPORTANT]
+> If you didn’t set a static IP during install of Debian, I highly recommend you do that **before** running the installer.
+> See [this guide](#configure-a-static-ip-address-in-debian-12-linux) for an easy how to. -->
+
 > \[!IMPORTANT]
 > If you didn’t set a static IP during install of Debian, I highly recommend you do that **before** running the installer.
 > See [this guide](#configure-a-static-ip-address-in-debian-12-linux) for an easy how to.

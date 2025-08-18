@@ -19,7 +19,7 @@
 
 > \[!IMPORTANT]
 > If you didn’t set a static IP during install of Debian, I highly recommend you do that **before** running the installer.
-> See [this guide](#configure-a-static-ip-address-in-debian-12-linux) for an easy how to.
+> See [this guide](https://github.com/dbqrs/asl3/wiki/Configure-a-Static-IP-Address-in-Debian-12-Linux) for an easy how to.
 
 > \[!TIP]
 > Review the installer script before running it: [https://asl.dbqrs.com](https://asl.dbqrs.com)

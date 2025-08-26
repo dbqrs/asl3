@@ -28,9 +28,9 @@
 ---
 
 ## Install Debian 12 for AllStarLink
-[![Watch the video](https://img.youtube.com/vi/OND_Ea3YM8o/hqdefault.jpg)](https://www.youtube.com/watch?v=OND_Ea3YM8o)
-
 This video will walk you through the installation of Debian. 
+
+[![Watch the video](https://img.youtube.com/vi/OND_Ea3YM8o/hqdefault.jpg)](https://www.youtube.com/watch?v=OND_Ea3YM8o)
 
 ---
 

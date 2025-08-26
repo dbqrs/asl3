@@ -11,17 +11,10 @@
 <h1 align="center">AllStarLink 3 Debian PC Installer</h1>
 
 > \[!IMPORTANT]
-> You **must** be logged in as the **root** user. At the command line type: **su -**  then enter the root passowrd you created when you installed Debian.
-
-<!-- > \[!IMPORTANT]
-> If you didn’t set a static IP during install of Debian, I highly recommend you do that **before** running the installer.
-> See [this guide](#configure-a-static-ip-address-in-debian-12-linux) for an easy how to. -->
-
-> \[!IMPORTANT]
 > If you didn’t set a static IP during install of Debian, I highly recommend you do that **before** running the installer.
 > See [this guide](https://github.com/dbqrs/asl3/wiki/Configure-a-Static-IP-Address-in-Debian-12-Linux) for an easy how to.
 
-> \[!TIP]
+> \[!WARNING]
 > Review the installer script before running it: [https://asl.dbqrs.com](https://asl.dbqrs.com)
 
 > \[!NOTE]
@@ -33,6 +26,16 @@
 [Rufus bootable USB creator](https://rufus.ie/en/)
 
 ---
+
+## Install Debian 12 for AllStarLink
+[Install Debian 12 for AllStarLink](https://www.youtube.com/watch?v=OND_Ea3YM8o) - This video will walk you through the installation of Debian. 
+
+---
+
+## Install AllStarLink 3
+
+> \[!IMPORTANT]
+> You **must** be logged in as the **root** user. At the command line type: **su -**  then enter the root passowrd you created when you installed Debian.
 
 ### 1) Install `curl`
 

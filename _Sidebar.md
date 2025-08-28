@@ -1,4 +1,8 @@
-Home
-Debian PC Installation Instructions
-Configure a Static IP Address
-Setting up AllStarLink 3 with a Shari PI
+# Wiki
+
+- [Table Of Contents](https://github.com/dbqrs/asl3/wiki)
+- [Debian PC Installation Instructions](https://github.com/dbqrs/asl3/wiki/Debian-PC-Installation-Instructions)
+- [Getting Started](Getting-Started)
+- [Guides](Guides)
+- [API Reference](API-Reference)
+- [FAQ](FAQ)

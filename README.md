@@ -8,7 +8,7 @@
   />
 </p>
 
-<h1 align="center">AllStarLink 3 Debian PC Installer</h1>
+<h1 align="center">AllStarLink 3 PC Installation Script</h1>
 
 <H2>
 <p align="center">

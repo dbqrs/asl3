@@ -16,7 +16,7 @@
   <a href="https://github.com/dbqrs/asl3/wiki/00-%E2%80%90-Table-Of-Contents">wiki</a>.
 </p></H2>
 
-This is a bash script to set up **AllStarLink 3 (ASL3)** on a regular PC that runs **Debian Linux**. Instead of using a Raspberry Pi.
+This is a bash script to set up **AllStarLink 3 (ASL3)** on a regular PC that runs **Debian Linux**. This is not intended for the Raspberry Pi.
 
 AllStarLink is software that lets **ham radio operators** connect their radios to the internet using VoIP technology. 
 
@@ -24,4 +24,4 @@ AllStarLink is software that lets **ham radio operators** connect their radios t
 Installing AllStarLink can be tricky and involves lots of technical steps. This script **automates the installation** so hams can get their AllStarLink node running faster.
 
 * It only works on **Debian 12** right now (not the newest Debian 13 yet).
-* You need an **amateur radio license** to actually use AllStarLink to transmit. 
+* You need an **amateur radio license** to use AllStarLink to transmit. 

@@ -79,7 +79,7 @@ apt update
 # Install ASL3, Allmon3, Cockpit tools, Python serial, and sudo
 apt install -y asl3 asl3-update-nodelist asl3-menu allmon3 \
 cockpit cockpit-networkmanager cockpit-packagekit cockpit-sosreport \
-cockpit-storaged cockpit-system cockpit-ws python3-serial sudo
+cockpit-storaged cockpit-system cockpit-ws python3-serial sudo asl3-pi-appliance
 
 # Download the HTML and branding tarballs for customization
 wget -c https://raw.githubusercontent.com/dbqrs/asl3/refs/heads/main/html.tar.gz

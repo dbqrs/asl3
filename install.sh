@@ -76,6 +76,9 @@ dpkg -i asl-apt-repos.deb12_all.deb
 # Update the package index
 apt update
 
+#Adduser allmon3
+/sbin/adduser allmon3
+
 # Install ASL3, Allmon3, Cockpit tools, Python serial, and sudo
 apt install -y asl3 asl3-update-nodelist asl3-menu allmon3 \
 cockpit cockpit-networkmanager cockpit-packagekit cockpit-sosreport \
